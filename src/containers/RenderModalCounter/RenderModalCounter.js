@@ -23,6 +23,13 @@ class RenderModalCounter extends Component {
     this.setState({toggleModal: false});
   }
 
+  handleResetEverything = () => {
+    this.setState({
+      toggleModal: false,
+      modalOpenCounter: 0 
+    })
+  }
+
   render() {
     return (
       <div>
@@ -42,6 +49,8 @@ class RenderModalCounter extends Component {
             modalOpenCounter={this.state.modalOpenCounter} 
           />
         ) : null}
+
+        <button onClick={this.handleResetEverything}>Reset Everything</button>
       </div>
     )
   }
