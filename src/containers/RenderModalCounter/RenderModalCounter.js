@@ -23,15 +23,17 @@ class RenderModalCounter extends Component {
     return (
       <div>
         <h1>Click the button to open the modal:</h1>
-        <button 
-          onClick={this.handleModalOpen}
-          // handleModalClose={this.handleModalClose}
-        >
-          Click Here
-        </button>
+
+        {this.state.toggleModal ? null : (
+          <button 
+            onClick={this.handleModalOpen}
+          >
+            Click Here
+          </button>
+        )}
 
         {this.state.toggleModal ? (
-          <Modal />
+          <Modal handleModalClose={this.handleModalClose} />
         ) : null}
       </div>
     )
