@@ -7,12 +7,16 @@ class RenderModalCounter extends Component {
     super(props);
     
     this.state = {
-      toggleModal: false
+      toggleModal: false,
+      modalOpenCounter: 0
     }
   }
 
   handleModalOpen = () => {
-    this.setState({toggleModal: true});
+    this.setState({
+      toggleModal: true,
+      modalOpenCounter: ++this.state.modalOpenCounter
+    });
   }
 
   handleModalClose = () => {
@@ -33,7 +37,10 @@ class RenderModalCounter extends Component {
         )}
 
         {this.state.toggleModal ? (
-          <Modal handleModalClose={this.handleModalClose} />
+          <Modal 
+            handleModalClose={this.handleModalClose}
+            modalOpenCounter={this.state.modalOpenCounter} 
+          />
         ) : null}
       </div>
     )

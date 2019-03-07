@@ -9,6 +9,17 @@ class Modal extends Component {
     return (
       <div>
         <h1>THE MODAL IS HERE</h1>
+
+        {this.props.modalOpenCounter === 1 ? (        
+          <p>
+            Modal has been clicked 1 time.
+          </p>) 
+        : (
+          <p>
+            Modal has been clicked {this.props.modalOpenCounter} times.
+          </p>
+        )}
+
         <button onClick={this.props.handleModalClose}>Close</button>
       </div>
     )
