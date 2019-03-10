@@ -33,8 +33,13 @@ class RenderModalCounter extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Click the button to open the modal:</h1>
+      <div 
+        id="render-modal-container"
+        className = {this.state.toggleModalOpen ? (
+          "modal-overlay"
+        ) : null}
+      >
+        <h1 id="main-header">Click the button to open the modal:</h1>
 
         <div id="modal-location">
           {this.state.toggleModalOpen ? (
