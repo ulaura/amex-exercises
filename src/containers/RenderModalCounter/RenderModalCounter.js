@@ -16,7 +16,7 @@ class RenderModalCounter extends Component {
   handleModalOpen = () => {
     this.setState({
       toggleModalOpen: true,
-      modalOpenCounter: ++this.state.modalOpenCounter
+      modalOpenCounter: this.state.modalOpenCounter + 1
     });
   }
 
