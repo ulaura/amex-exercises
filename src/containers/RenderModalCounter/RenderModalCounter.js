@@ -48,11 +48,12 @@ class RenderModalCounter extends Component {
               modalOpenCounter={this.state.modalOpenCounter} 
             />
           ) : (
-            <button 
+            <div
+              id="modal-open-button"
               onClick={this.handleModalOpen}
             >
-              Click Here
-            </button>
+              <p id="modal-open-button-text">Click Here</p>
+            </div>
           )}
         </div>
 

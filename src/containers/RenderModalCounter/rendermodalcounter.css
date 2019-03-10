@@ -8,6 +8,28 @@
   margin-top: 0;
 }
 
+#modal-open-button {
+  display: block;
+  border: 1px solid #a3abf3;
+  background: #a3abf3;
+  border-radius: 10px;
+  margin: 0 auto;
+  width: 30%;
+}
+
+#modal-open-button:hover {
+  cursor: pointer;
+  background: #7b81b9;
+  border: 1px solid #7b81b9;
+}
+
+#modal-open-button-text {
+  text-align: center;
+  font-weight: 900;
+  font-size: 1.6rem;
+  margin: 2% 0;
+}
+
 #modal {
   margin: auto;
   width: 80%;
