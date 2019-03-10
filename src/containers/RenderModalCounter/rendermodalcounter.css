@@ -33,6 +33,7 @@
 #reset-button {
   margin-top: 5%;
   margin-left: 2%;
+  width: 15%;
   background: #E29090;
   border: 1px solid #E29090;
 }
@@ -43,13 +44,23 @@
 }
 
 #reset-button-text {
-  font-size: 1.2rem;
+  font-size: 1rem;
+}
+
+#modal-close-button {
+  float: right;
+  font-weight: 900;
+  margin-right: 1%;
+}
+
+#modal-close-button:hover {
+  cursor: pointer;
 }
 
 #modal {
   margin: auto;
   width: 80%;
-  height: auto;
+  height: 100%;
   border-radius: 5px;
   background: white;
   z-index: 1000;
@@ -71,6 +82,17 @@
   background: #EEEEEE;
   margin-top: 0;
   border-radius: 5px 5px 0 0;
+}
+
+#modal-header-text {
+  display: inline-block;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.modal-message {
+  margin-top: 10%;
+  margin-bottom: 10%;
 }
 
 #modal-location {

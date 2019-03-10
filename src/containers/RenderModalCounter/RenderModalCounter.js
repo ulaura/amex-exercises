@@ -62,7 +62,7 @@ class RenderModalCounter extends Component {
           id="reset-button" 
           onClick={this.handleResetEverything}
         >
-          <p className="modal-button-text" id="reset-button-text">Reset Everything</p>
+          <p className="modal-button-text" id="reset-button-text">Reset</p>
         </div>
       </div>
     )
