@@ -2,25 +2,4 @@ body {
   font-family: 'Nunito', sans-serif;
 }
 
-#modal {
-  margin: auto;
-  width: 70%;
-  height: auto;
-  border: 3px purple solid;
-}
 
-#modal-header, .modal-message {
-  text-align: center;
-}
-
-#modal-header {
-  width: 100%;
-  height: auto;
-  background: #EEEEEE;
-  margin-top: 0;
-}
-
-#modal-reset-button {
-  display: block;
-  margin-top: 80px;
-}

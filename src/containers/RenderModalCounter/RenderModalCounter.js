@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Modal from "./Modal";
+import './rendermodalcounter.css'
 
 
 class RenderModalCounter extends Component {
@@ -35,18 +36,20 @@ class RenderModalCounter extends Component {
       <div>
         <h1>Click the button to open the modal:</h1>
 
-        {this.state.toggleModalOpen ? (
-          <Modal 
-            handleModalClose={this.handleModalClose}
-            modalOpenCounter={this.state.modalOpenCounter} 
-          />
-        ) : (
-          <button 
-            onClick={this.handleModalOpen}
-          >
-            Click Here
-          </button>
-        )}
+        <div id="modal-location">
+          {this.state.toggleModalOpen ? (
+            <Modal 
+              handleModalClose={this.handleModalClose}
+              modalOpenCounter={this.state.modalOpenCounter} 
+            />
+          ) : (
+            <button 
+              onClick={this.handleModalOpen}
+            >
+              Click Here
+            </button>
+          )}
+        </div>
 
         <button
           id="modal-reset-button" 
