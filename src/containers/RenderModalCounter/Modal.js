@@ -11,7 +11,7 @@ class Modal extends Component {
         <div id="modal-header">
           <h1 id="modal-header-text">THE MODAL IS OPEN</h1>
           <div 
-            id="modal-close-button" 
+            id="modal-close-button-x" 
             onClick={this.props.handleModalClose}
           >
             X
@@ -27,6 +27,12 @@ class Modal extends Component {
             This modal has been clicked {this.props.modalOpenCounter} times.
           </p>
         )}
+          <div
+            className="modal-button"
+            onClick={this.props.handleModalClose}
+          >
+            <p className="modal-button-text" id="modal-close-button">Close</p>
+          </div>
       </div>
     )
   }
