@@ -49,20 +49,21 @@ class RenderModalCounter extends Component {
             />
           ) : (
             <div
-              id="modal-open-button"
+              className="modal-button"
               onClick={this.handleModalOpen}
             >
-              <p id="modal-open-button-text">Click Here</p>
+              <p className="modal-button-text">Click Here</p>
             </div>
           )}
         </div>
 
-        <button
-          id="modal-reset-button" 
+        <div
+          className="modal-button"
+          id="reset-button" 
           onClick={this.handleResetEverything}
         >
-          Reset Everything
-        </button>
+          <p className="modal-button-text" id="reset-button-text">Reset Everything</p>
+        </div>
       </div>
     )
   }
