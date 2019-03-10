@@ -16,9 +16,9 @@ class RenderText extends Component {
 
   handleGrowOrShrink = () => {
     if (window.scrollY > this.state.position) {
-      this.setState({position: window.scrollY}, console.log(this.state));
+      this.setState({position: window.scrollY});
     } else if (this.state.position > window.scrollY) {
-      this.setState({position: window.scrollY}, console.log(this.state));
+      this.setState({position: window.scrollY});
     }
   }
 
@@ -28,6 +28,7 @@ class RenderText extends Component {
     return (
       <div id="render-text-container" style={{height: "900px"}}>
         <h1>This is RenderText Component</h1>
+
         <p style={{position: "fixed", fontSize: positionFont }}>
           This text will grow or shrink while scrolling.
         </p>
