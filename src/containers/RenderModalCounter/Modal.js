@@ -7,16 +7,16 @@ class Modal extends Component {
 
   render() {
     return (
-      <div>
-        <h1>THE MODAL IS HERE</h1>
+      <div id="modal">
+        <h1 id="modal-header">THE MODAL IS HERE</h1>
 
         {this.props.modalOpenCounter === 1 ? (        
-          <p>
-            Modal has been clicked 1 time.
+          <p className="modal-message">
+            This modal has been clicked 1 time.
           </p>) 
         : (
-          <p>
-            Modal has been clicked {this.props.modalOpenCounter} times.
+          <p className="modal-message">
+            This modal has been clicked {this.props.modalOpenCounter} times.
           </p>
         )}
 

@@ -7,25 +7,25 @@ class RenderModalCounter extends Component {
     super(props);
     
     this.state = {
-      toggleModal: false,
+      toggleModalOpen: false,
       modalOpenCounter: 0
     }
   }
 
   handleModalOpen = () => {
     this.setState({
-      toggleModal: true,
+      toggleModalOpen: true,
       modalOpenCounter: ++this.state.modalOpenCounter
     });
   }
 
   handleModalClose = () => {
-    this.setState({toggleModal: false});
+    this.setState({toggleModalOpen: false});
   }
 
   handleResetEverything = () => {
     this.setState({
-      toggleModal: false,
+      toggleModalOpen: false,
       modalOpenCounter: 0 
     })
   }
@@ -35,7 +35,12 @@ class RenderModalCounter extends Component {
       <div>
         <h1>Click the button to open the modal:</h1>
 
-        {this.state.toggleModal ? null : (
+        {this.state.toggleModalOpen ? (
+          <Modal 
+            handleModalClose={this.handleModalClose}
+            modalOpenCounter={this.state.modalOpenCounter} 
+          />
+        ) : (
           <button 
             onClick={this.handleModalOpen}
           >
@@ -43,14 +48,12 @@ class RenderModalCounter extends Component {
           </button>
         )}
 
-        {this.state.toggleModal ? (
-          <Modal 
-            handleModalClose={this.handleModalClose}
-            modalOpenCounter={this.state.modalOpenCounter} 
-          />
-        ) : null}
-
-        <button onClick={this.handleResetEverything}>Reset Everything</button>
+        <button
+          id="modal-reset-button" 
+          onClick={this.handleResetEverything}
+        >
+          Reset Everything
+        </button>
       </div>
     )
   }
