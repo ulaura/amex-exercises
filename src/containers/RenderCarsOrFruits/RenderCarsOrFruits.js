@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import CarsList from "./CarsList";
+import FruitsList from "./FruitsList";
 
 
 class RenderCarsOrFruits extends Component {
@@ -14,17 +16,12 @@ class RenderCarsOrFruits extends Component {
     this.setState({value: e.target.value});
   }
 
-  handleSubmit = e => {
-    e.preventDefault();
-    console.log("You chose:", this.state.value);
-  }
-
   render() {
     return (
       <div>
         <h1>This is RenderCarsOrFruits Component</h1>
 
-        <form onSubmit={this.handleSubmit}>
+        <form>
           <label>
             Choose: Cars or Fruits?
             <select value={this.state.value} onChange={this.handleOptionChange}>
@@ -32,8 +29,13 @@ class RenderCarsOrFruits extends Component {
               <option value="Fruits" defaultValue>Fruits</option>
             </select>
           </label>
-          <input type="submit" value="Submit" />
         </form>
+
+        {this.state.value === "Cars" ? (
+          <CarsList />
+        ) : (
+          <FruitsList />
+        )}
       </div>
     )
   }
