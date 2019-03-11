@@ -8,12 +8,22 @@ class RenderCarsOrFruits extends Component {
     super(props); 
 
     this.state = {
-      value: "Fruits"
+      value: "Cars",
+      sortDirection: false,
+      cars: ["Tesla Model 3", "Batmobile", "Nissan Versa", "Magic Carpet", "Infiniti Q50"]
     }
   }
 
   handleOptionChange = e => {
     this.setState({value: e.target.value});
+  }
+
+  handleSortButton = () => {
+    if (this.state.sortDirection === false) {
+      this.setState((state) => ({
+        sortDirection: state.sortDirection = "asc"
+      }, console.log(this.state.sortDirection)))
+    }
   }
 
   render() {
@@ -26,16 +36,18 @@ class RenderCarsOrFruits extends Component {
             Choose: Cars or Fruits?
             <select value={this.state.value} onChange={this.handleOptionChange}>
               <option value="Cars">Cars</option>
-              <option value="Fruits" defaultValue>Fruits</option>
+              <option value="Fruits">Fruits</option>
             </select>
           </label>
         </form>
 
         {this.state.value === "Cars" ? (
-          <CarsList />
+          <CarsList cars={this.state.cars} sort={this.state.sortDirection} />
         ) : (
-          <FruitsList />
+          <FruitsList sort={this.state.sortDirection} />
         )}
+
+        <button onClick={this.handleSortButton}>Sort!</button>
       </div>
     )
   }
