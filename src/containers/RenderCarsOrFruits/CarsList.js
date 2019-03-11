@@ -5,12 +5,12 @@ class CarsList extends Component {
     return (
       <div>
         <h2>List of Cars</h2>
-        <ol>
+        <ul>
           <li>Tesla Model 3</li>
           <li>Batmobile</li>
           <li>Nissan Versa</li>
           <li>Magic Carpet</li>
-        </ol>
+        </ul>
       </div>
     )
   }
