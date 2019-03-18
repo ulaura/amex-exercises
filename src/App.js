@@ -10,14 +10,14 @@ const App = () => {
   return (
     <Router>
       <div>
-        <ul>
-          <li>
+        <ul id="nav-bar">
+          <li id="home-link">
             <Link to="/">Home</Link>
           </li>
           <li>
             <Link to="/rendermodalcounter">Render Modal Counter</Link>
           </li>
-          <li>
+          <li id="small-window-link">
             <Link to="/rendertext">Render Text</Link>
           </li>
           <li>

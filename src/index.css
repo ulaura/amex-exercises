@@ -9,9 +9,46 @@ body {
   font-family: 'Nunito', sans-serif;
 }
 
-.page-header {
-  text-align: center;
-
+#nav-bar {
+  position: relative;
+  background: #ebebeb;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: none;
+  height: 4rem;
+  width: 100%;
 }
 
+#nav-bar li {
+  float: left;
+}
+
+#nav-bar li a {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  padding-top: 15px;
+  padding-right: 2rem;
+}
+
+#home-link {
+  padding-left: 2rem;
+}
+
+.page-header {
+  text-align: center;
+}
+
+
+@media (max-width: 600px) {
+  #nav-bar {
+    height: 6rem;
+  }
+
+  #small-window-link {
+    padding-left: 2rem;
+  }
+}
 
