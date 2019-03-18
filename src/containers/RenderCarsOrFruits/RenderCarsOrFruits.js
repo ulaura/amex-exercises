@@ -8,7 +8,6 @@ class RenderCarsOrFruits extends Component {
 
     this.state = {
       value: "Cars",
-      sortDirection: false,
       cars: ["Tesla Model 3", "Batmobile", "Nissan Versa", "Magic Carpet", "Infiniti Q50"],
       fruits: ["Avocado", "Lemon", "Cherries", "Prickly Pear", "Blueberries"]
     }
@@ -34,9 +33,9 @@ class RenderCarsOrFruits extends Component {
         </form>
 
         {this.state.value === "Cars" ? (
-          <CarsOrFruitsList list={this.state.cars} sort={this.state.sortDirection} />
+          <CarsOrFruitsList name={"Cars"} list={this.state.cars} />
         ) : (
-          <CarsOrFruitsList list={this.state.fruits} sort={this.state.sortDirection} />
+          <CarsOrFruitsList name={"Fruits"} list={this.state.fruits} />
         )}
       </div>
     )
