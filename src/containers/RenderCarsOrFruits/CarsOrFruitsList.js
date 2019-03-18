@@ -51,7 +51,7 @@ class CarsOrFruitsList extends Component {
             )
           )} 
         </ul>
-        <button onClick={this.handleSortButton}>Sort!</button>
+        <div id="sort-button" onClick={this.handleSortButton}>Sort!</div>
       </div>
     )
   }

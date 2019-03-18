@@ -1,0 +1,26 @@
+#component-container {
+  margin-left: 2rem;
+}
+
+#sort-button {
+  display: block;
+  border: 1px solid #a3abf3;
+  background: #a3abf3;
+  border-radius: 10px;
+  width: 20%;
+  padding: 10px 5px;
+  text-align: center;
+}
+
+#sort-button:hover {
+  cursor: pointer;
+  background: #7b81b9;
+  border: 1px solid #7b81b9;
+}
+
+select {
+  width: 20%;
+  margin-left: 5px;
+  font-size: 15px;
+}
+
