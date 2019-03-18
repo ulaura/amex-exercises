@@ -27,10 +27,10 @@ class RenderText extends Component {
 
     return (
       <div id="render-text-container" style={{height: "900px"}}>
-        <h1>This is RenderText Component</h1>
+        <h1 className="page-header">Render Text</h1>
 
         <p style={{position: "fixed", fontSize: positionFont }}>
-          This text will grow or shrink while scrolling.
+          This text will grow or shrink while scrolling. Start by scrolling down...
         </p>
       </div>
     )
