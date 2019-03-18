@@ -22,6 +22,7 @@
   cursor: pointer;
   background: #7b81b9;
   border: 1px solid #7b81b9;
+  color: #FFFFFF;
 }
 
 .modal-button-text {
@@ -42,6 +43,7 @@
 #reset-button:hover {
   background: #A86C6C;
   border: 1px solid #A86C6C;
+  color: #000000;
 }
 
 #reset-button-text {
