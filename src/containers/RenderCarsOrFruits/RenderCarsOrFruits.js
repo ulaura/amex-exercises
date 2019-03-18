@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import CarsList from "./CarsList";
-import FruitsList from "./FruitsList";
+import CarsOrFruitsList from './CarsOrFruitsList';
 
 
 class RenderCarsOrFruits extends Component {
@@ -10,20 +9,13 @@ class RenderCarsOrFruits extends Component {
     this.state = {
       value: "Cars",
       sortDirection: false,
-      cars: ["Tesla Model 3", "Batmobile", "Nissan Versa", "Magic Carpet", "Infiniti Q50"]
+      cars: ["Tesla Model 3", "Batmobile", "Nissan Versa", "Magic Carpet", "Infiniti Q50"],
+      fruits: ["Avocado", "Lemon", "Cherries", "Prickly Pear", "Blueberries"]
     }
   }
 
   handleOptionChange = e => {
     this.setState({value: e.target.value});
-  }
-
-  handleSortButton = () => {
-    if (this.state.sortDirection === false) {
-      this.setState((state) => ({
-        sortDirection: state.sortDirection = "asc"
-      }, console.log(this.state.sortDirection)))
-    }
   }
 
   render() {
@@ -42,12 +34,10 @@ class RenderCarsOrFruits extends Component {
         </form>
 
         {this.state.value === "Cars" ? (
-          <CarsList cars={this.state.cars} sort={this.state.sortDirection} />
+          <CarsOrFruitsList list={this.state.cars} sort={this.state.sortDirection} />
         ) : (
-          <FruitsList sort={this.state.sortDirection} />
+          <CarsOrFruitsList list={this.state.fruits} sort={this.state.sortDirection} />
         )}
-
-        <button onClick={this.handleSortButton}>Sort!</button>
       </div>
     )
   }
