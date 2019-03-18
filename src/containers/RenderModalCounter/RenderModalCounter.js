@@ -40,7 +40,7 @@ class RenderModalCounter extends Component {
         ) : null}
       >
         <h1 className="page-header">Render Modal Counter</h1>
-        <h3 id="main-header">Click the button to open the modal:</h3>
+        <h3 id="sub-header">Click the button to open the modal:</h3>
 
         <div id="modal-location">
           {this.state.toggleModalOpen ? (
