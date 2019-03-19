@@ -5,7 +5,7 @@ A group of exercises put together as requested by American Express. These exerci
 * Render Cars or Fruits
 
 ## Exercises
-1.  Render a button called “Open “and where you click on it, a modal opens with a message, “modal is clicked `<count>` number of times”. `<count>` should keep increasing on each click of open button. On clicking of the close button on modal, the modal should close. On click of the reset button on parent page, the counter value should reset to zero and modal popup count should start from one again.
+1.  Render a button called “Open “and where you click on it, a modal opens with a message, “modal is clicked `--count--` number of times”. `--count--` should keep increasing on each click of open button. On clicking of the close button on modal, the modal should close. On click of the reset button on parent page, the counter value should reset to zero and modal popup count should start from one again.
 
 2. Render a text on the page and that text size should increase and decrease with mouse scroll.
 
